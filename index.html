@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link href="/style/css?v=w9kT9r-wYcKXog7F9GRE_hgbsKx6DsYkWT7kzTzifhE1" rel="stylesheet"/>
+
+    <script src="/Resources/Messages.js"></script>
+
+    <link href="/style/site?v=iwUsi3REK-3ADjxVALJ5k_pRoRZij3qLDBC42thULB81" rel="stylesheet"/>
+
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <script src="/Scripts/sweetalert.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjLbmhIJnJ5rSLgd7acl-pXSd6CQdgvMg&libraries=places"></script>
+</head>
+<body>
+    <div style="position: absolute; top: 10px; right: 10px;">
+      <img src="iaa.png" style="height: 80px;">
+    </div>
+
+    <div id="navbar" class="navbar-collapse">
+        <div class="flags">
+            <a href='/Common/SetCulture?lang=he' class="he" title="עברית"></a>
+            <a href='/Common/SetCulture?lang=en' class="en" title="english"></a>
+            <a href='/Common/SetCulture?lang=uk' class="ua" title="Український"></a>
+            <a href='/Common/SetCulture?lang=fr' class="fr" title="français"></a>
+            <a href='/Common/SetCulture?lang=es' class="es" title="español"></a>
+        </div>
+    </div>
+    <div class="container body-content" style="max-width:1150px">
+        <div class="row">
+            <div class="col-sm-12" id="render-body">
+                
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/css/theme.bootstrap_3.min.css" integrity="sha256-vgjicWNWkVklkfuqKnQth9ww987V7wCOzh6A0qkJ2Lw=" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/jquery.tablesorter.min.js" integrity="sha256-uC1JMW5e1U5D28+mXFxzTz4SSMCywqhxQIodqLECnfU=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/jquery.tablesorter.widgets.min.js" integrity="sha256-Xx4HRK+CKijuO3GX6Wx7XOV2IVmv904m0HKsjgzvZiY=" crossorigin="anonymous"></script>
+<style>
+    td, th {
+        text-align: center;
+    }
+
+    .table-bordered tr:first-child {
+        font-weight: unset !important;
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+
+                <div class="card-body">
+                    <div class="row">
+                        <div class="card-title col-md-3">
+                            <div class="d-flex justify-content-start" style="text-align:center;">
+                                    <div class="image-container">
+                                            <img src="https://loglig.com/assets/players/PlayerImage_59808_22122023102139288.jpg" id="imgProfile" style="width: 150px; height: 150px" class="img-thumbnail" />
+
+                                    </div>
+                                <div class="userData ml-3">
+                                    <h2 class="d-block" style="font-size: 2.7rem; font-weight: bold; text-align:center; margin-top:10px;">Rotem Mokady</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                                <div class="row" style="margin-top:10px;">
+                                    <div class="col-sm-4 col-md-3 col-6">
+                                        <label style="font-weight:bold;">Year Of Birth:</label>
+                                    </div>
+                                    <div class="col-md-7 col-5">
+                                        2003
+                                    </div>
+                                </div>
+                            <div class="row">
+                                <div class="col-sm-4 col-md-3 col-6">
+                                    <label style="font-weight:bold;">Gender:</label>
+                                </div>
+                                <div class="col-md-8 col-6">
+                                    Male
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-4 col-md-3 col-6">
+                                    <label style="font-weight:bold;">Club:</label>
+                                </div>
+                                <div class="col-md-8 col-6">
+                                    הפועל תל-אביב 
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-4 col-md-3 col-6">
+                                    <label style="font-weight:bold;">Personal Coach:</label>
+                                </div>
+                                <div class="col-md-8 col-6">
+                                    
+                                </div>
+                            </div>
+                            <hr />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <ul class="nav nav-tabs mb-4" id="myTab" role="tablist">
+                                        <li class="nav-item active">
+                                            <a class="nav-link active" id="personalbests-tab" data-toggle="tab" href="#personalbests" role="tab" aria-controls="personalbests" aria-selected="true">Personal Bests</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="seasonalbests-tab" data-toggle="tab" href="#seasonalbests" role="tab" aria-controls="seasonalbests" aria-selected="false">Seasonal Bests</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="results-tab" data-toggle="tab" href="#results" role="tab" aria-controls="results" aria-selected="false">Results</a>
+                                        </li>
+
+                                    <li class="nav-item pull-right">
+                                        <select class="form-control" id="ddlSeasons" name="SeasonId" style="width: 150px;" title="Season"><option selected="selected" value="1604">2024-2025</option>
+<option value="1534">2023-2024</option>
+<option value="1395">2022-2023</option>
+<option value="1287">2021-2022</option>
+<option value="1253">2020-2021</option>
+<option value="1166">2019-2020</option>
+<option value="1106">2018-2019</option>
+<option value="201415">2014/15</option>
+</select>
+                                    </li>
+
+                            </ul>
+                            <div class="tab-content ml-1" id="myTabContent" style="margin-top: 20px;">
+                                <div class="tab-pane fade active in" id="personalbests" role="tabpanel" aria-labelledby="personalbests-tab">
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <table class="table table-bordered white_arrow">
+                                                        <thead>
+                                                            <tr style="background:royalblue;">
+                                                                <th>Discipline</th>
+                                                                <th>Result</th>
+                                                                <th class="sorter-shortDate dateFormat-ddmmyyyy">Date</th>
+                                                                <th>Competition Name</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                                <tr>
+
+                                                                    <td>10km</td>
+                                                                    <td>34:49</td>
+                                                                    <td>28/02/2025</td>
+                                                                    <td>מרתון בנק לאומי תל אביב</td>
+                                                                </tr>
+                                                                <tr>
+
+                                                                    <td>2000m</td>
+                                                                    <td>5:33.87</td>
+                                                                    <td>10/02/2025</td>
+                                                                    <td>סבב מסלול - 4</td>
+                                                                </tr>
+                                                                <tr>
+
+                                                                    <td>15km</td>
+                                                                    <td>53:40</td>
+                                                                    <td>07/02/2025</td>
+                                                                    <td>מרוץ ארץ ים המלח - אליפות ישראל ב - 50 ק&quot;מ</td>
+                                                                </tr>
+                                                                <tr>
+
+                                                                    <td>1500m</td>
+                                                                    <td>4:08.01</td>
+                                                                    <td>20/01/2025</td>
+                                                                    <td>סבב מסלול - 3</td>
+                                                                </tr>
+                                                                <tr>
+
+                                                                    <td>5000m</td>
+                                                                    <td>15:55.23</td>
+                                                                    <td>30/12/2024</td>
+                                                                    <td>סבב מסלול - 1</td>
+                                                                </tr>
+                                                                <tr>
+
+                                                                    <td>5 ק&quot;מ כביש</td>
+                                                                    <td>16:06</td>
+                                                                    <td>18/10/2024</td>
+                                                                    <td>מרוץ הפועל תל אביב</td>
+                                                                </tr>
+                                                                <tr>
+
+                                                                    <td>800m</td>
+                                                                    <td>2:18.93</td>
+                                                                    <td>05/07/2015</td>
+                                                                    <td>הזמנה</td>
+                                                                </tr>
+                                                                <tr>
+
+                                                                    <td>1000m</td>
+                                                                    <td>3:04.27</td>
+                                                                    <td>21/05/2015</td>
+                                                                    <td>יום האתלטיקה הבינלאומי לילדים 15</td>
+                                                                </tr>
+                                                                <tr>
+
+                                                                    <td>60m</td>
+                                                                    <td>9.20</td>
+                                                                    <td>28/04/2015</td>
+                                                                    <td>הזמנה</td>
+                                                                </tr>
+                                                                <tr>
+
+                                                                    <td>300m</td>
+                                                                    <td>45.20</td>
+                                                                    <td>19/03/2015</td>
+                                                                    <td>ליגת מרכזי מצויינות ילדים 15 - מחזור ד&#39;</td>
+                                                                </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                </div>
+                                <div class="tab-pane fade" id="seasonalbests" role="tabpanel" aria-labelledby="seasonalbests-tab">
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <table class="table table-bordered white_arrow">
+                                                            <thead>
+                                                                <tr style="background:royalblue;">
+
+                                                                    <th>Discipline</th>
+                                                                    <th>Rank</th>
+                                                                    <th>Result</th>
+                                                                    <th>Wind</th>
+                                                                    <th>Points</th>
+                                                                    <th class="sorter-shortDate dateFormat-ddmmyyyy">Date</th>
+                                                                    <th>Competition Name</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                    <tr>
+
+                                                                        <td>5 ק&quot;מ כביש</td>
+                                                                        <td>13</td>
+                                                                        <td>16:06</td>
+                                                                        <td style="direction:ltr;"></td>
+                                                                        <td>0</td>
+                                                                        <td>18/10/2024</td>
+                                                                        <td>מרוץ הפועל תל אביב</td>
+                                                                    </tr>
+                                                                    <tr>
+
+                                                                        <td>10km</td>
+                                                                        <td>15</td>
+                                                                        <td>34:49</td>
+                                                                        <td style="direction:ltr;"></td>
+                                                                        <td>594</td>
+                                                                        <td>28/02/2025</td>
+                                                                        <td>מרתון בנק לאומי תל אביב</td>
+                                                                    </tr>
+                                                                    <tr>
+
+                                                                        <td>1500m</td>
+                                                                        <td>6</td>
+                                                                        <td>4:08.01</td>
+                                                                        <td style="direction:ltr;"></td>
+                                                                        <td>763</td>
+                                                                        <td>20/01/2025</td>
+                                                                        <td>סבב מסלול - 3</td>
+                                                                    </tr>
+                                                                    <tr>
+
+                                                                        <td>15km</td>
+                                                                        <td>1</td>
+                                                                        <td>53:40</td>
+                                                                        <td style="direction:ltr;"></td>
+                                                                        <td>587</td>
+                                                                        <td>07/02/2025</td>
+                                                                        <td>מרוץ ארץ ים המלח - אליפות ישראל ב - 50 ק&quot;מ</td>
+                                                                    </tr>
+                                                                    <tr>
+
+                                                                        <td>2000m</td>
+                                                                        <td>5</td>
+                                                                        <td>5:33.87</td>
+                                                                        <td style="direction:ltr;"></td>
+                                                                        <td>821</td>
+                                                                        <td>10/02/2025</td>
+                                                                        <td>סבב מסלול - 4</td>
+                                                                    </tr>
+                                                                    <tr>
+
+                                                                        <td>5000m</td>
+                                                                        <td>3</td>
+                                                                        <td>15:55.23</td>
+                                                                        <td style="direction:ltr;"></td>
+                                                                        <td>652</td>
+                                                                        <td>30/12/2024</td>
+                                                                        <td>סבב מסלול - 1</td>
+                                                                    </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                </div>
+                                <div class="tab-pane fade" id="results" role="tabpanel" aria-labelledby="results-tab">
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <table class="table table-bordered black_arrow">
+                                                                <thead>
+                                                                    <tr>
+                                                                                <th colspan="6" style="background:royalblue;"></th>
+
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th class="sorter-shortDate dateFormat-ddmmyyyy" style="width:10%">Date</th>
+                                                                        <th style="width:40%">Competition Name</th>
+                                                                        <th style="width:10%">Rank</th>
+                                                                        <th style="width:15%">Result</th>
+                                                                        <th style="width:10%">Wind</th>
+                                                                        <th style="width:15%">Points</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                        <tr>
+                                                                            <td>18/10/2024</td>
+                                                                            <td>מרוץ הפועל תל אביב</td>
+                                                                            <td>13</td>
+                                                                            <td>16:06</td>
+                                                                            <td style="direction:ltr;"></td>
+                                                                            <td>0</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>14/11/2024</td>
+                                                                            <td>סבב ריצות שדה 2 - פארק הירקון</td>
+                                                                            <td>3</td>
+                                                                            <td>31:53</td>
+                                                                            <td style="direction:ltr;"></td>
+                                                                            <td>0</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>29/11/2024</td>
+                                                                            <td>אליפות ישראל במרוצי שדה </td>
+                                                                            <td>12</td>
+                                                                            <td>33:49</td>
+                                                                            <td style="direction:ltr;"></td>
+                                                                            <td>0</td>
+                                                                        </tr>
+                                                                </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <table class="table table-bordered black_arrow">
+                                                                <thead>
+                                                                    <tr>
+                                                                                <th colspan="6" style="background:royalblue;">5000m</th>
+
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th class="sorter-shortDate dateFormat-ddmmyyyy" style="width:10%">Date</th>
+                                                                        <th style="width:40%">Competition Name</th>
+                                                                        <th style="width:10%">Rank</th>
+                                                                        <th style="width:15%">Result</th>
+                                                                        <th style="width:10%">Wind</th>
+                                                                        <th style="width:15%">Points</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                        <tr>
+                                                                            <td>30/12/2024</td>
+                                                                            <td>סבב מסלול - 1</td>
+                                                                            <td>3</td>
+                                                                            <td>15:55.23</td>
+                                                                            <td style="direction:ltr;"></td>
+                                                                            <td>652</td>
+                                                                        </tr>
+                                                                </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <table class="table table-bordered black_arrow">
+                                                                <thead>
+                                                                    <tr>
+                                                                                <th colspan="6" style="background:royalblue;">1500m</th>
+
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th class="sorter-shortDate dateFormat-ddmmyyyy" style="width:10%">Date</th>
+                                                                        <th style="width:40%">Competition Name</th>
+                                                                        <th style="width:10%">Rank</th>
+                                                                        <th style="width:15%">Result</th>
+                                                                        <th style="width:10%">Wind</th>
+                                                                        <th style="width:15%">Points</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                        <tr>
+                                                                            <td>20/01/2025</td>
+                                                                            <td>סבב מסלול - 3</td>
+                                                                            <td>6</td>
+                                                                            <td>4:08.01</td>
+                                                                            <td style="direction:ltr;"></td>
+                                                                            <td>763</td>
+                                                                        </tr>
+                                                                </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <table class="table table-bordered black_arrow">
+                                                                <thead>
+                                                                    <tr>
+                                                                                <th colspan="6" style="background:royalblue;">15km</th>
+
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th class="sorter-shortDate dateFormat-ddmmyyyy" style="width:10%">Date</th>
+                                                                        <th style="width:40%">Competition Name</th>
+                                                                        <th style="width:10%">Rank</th>
+                                                                        <th style="width:15%">Result</th>
+                                                                        <th style="width:10%">Wind</th>
+                                                                        <th style="width:15%">Points</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                        <tr>
+                                                                            <td>07/02/2025</td>
+                                                                            <td>מרוץ ארץ ים המלח - אליפות ישראל ב - 50 ק&quot;מ</td>
+                                                                            <td>1</td>
+                                                                            <td>53:40</td>
+                                                                            <td style="direction:ltr;"></td>
+                                                                            <td>587</td>
+                                                                        </tr>
+                                                                </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <table class="table table-bordered black_arrow">
+                                                                <thead>
+                                                                    <tr>
+                                                                                <th colspan="6" style="background:royalblue;">2000m</th>
+
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th class="sorter-shortDate dateFormat-ddmmyyyy" style="width:10%">Date</th>
+                                                                        <th style="width:40%">Competition Name</th>
+                                                                        <th style="width:10%">Rank</th>
+                                                                        <th style="width:15%">Result</th>
+                                                                        <th style="width:10%">Wind</th>
+                                                                        <th style="width:15%">Points</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                        <tr>
+                                                                            <td>10/02/2025</td>
+                                                                            <td>סבב מסלול - 4</td>
+                                                                            <td>5</td>
+                                                                            <td>5:33.87</td>
+                                                                            <td style="direction:ltr;"></td>
+                                                                            <td>821</td>
+                                                                        </tr>
+                                                                </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <table class="table table-bordered black_arrow">
+                                                                <thead>
+                                                                    <tr>
+                                                                                <th colspan="6" style="background:royalblue;">10km</th>
+
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th class="sorter-shortDate dateFormat-ddmmyyyy" style="width:10%">Date</th>
+                                                                        <th style="width:40%">Competition Name</th>
+                                                                        <th style="width:10%">Rank</th>
+                                                                        <th style="width:15%">Result</th>
+                                                                        <th style="width:10%">Wind</th>
+                                                                        <th style="width:15%">Points</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                        <tr>
+                                                                            <td>28/02/2025</td>
+                                                                            <td>מרתון בנק לאומי תל אביב</td>
+                                                                            <td>15</td>
+                                                                            <td>34:49</td>
+                                                                            <td style="direction:ltr;"></td>
+                                                                            <td>594</td>
+                                                                        </tr>
+                                                                </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $('.table').tablesorter({
+        usNumberFormat : false,
+        sortReset      : true,
+        sortRestart    : true
+    });
+    $('#ddlSeasons').change(function (i, v) {
+        var seasonId = $(this).val();
+        var tabName = null;
+        var tabs = $('li.active a');
+        if (tabs) {
+            var tab = tabs[0];
+            if (tab) {
+                var href = tab.href;
+                tabName = href.substring(href.indexOf('#') + 1);
+            }
+        }
+        var link = "";
+        var selectedSeason = this.options[this.selectedIndex].innerHTML;
+        var isArchiveSeason = true;
+        var notArchiveSeasons = ["2018-2019","2019-2020","2020-2021","2021-2022","2022-2023","2023-2024","2024-2025"];
+        $.each(notArchiveSeasons, function (index, value) {
+            if (selectedSeason == value) {
+                isArchiveSeason = false;
+                return false;
+            }
+        });
+        if (isArchiveSeason == false)
+            link = "/Players/Details/59808" + "?seasonId=" + seasonId;
+        else
+            link = "/Players/ArchiveDetails/59808" + "?seasonId=" + seasonId + "&unionId=" + '49';
+
+        if (tabName) {
+            link = link + "&tab=" + tabName;
+        }
+
+        window.location.href = link;
+    });
+</script>
+<br />
+<br />
+
+<script src="https://cdn.userway.org/widget.js" data-account="qpdKqwUKio"></script>
+
+            </div>
+        </div>
+        <footer style="margin-top: 5px; margin-left: 15px;">
+            <a href="https://loglig.com" style="color:#333333">
+                <div class="pull-left bot-title">Powered By</div>
+                <img src="/content/img/logo.png" class="pull-left bot-logo" alt="Powered By LogLig" />
+                <div class="clearfix"></div>
+            </a>
+        </footer>
+    </div>
+
+    <script src="/bundles/jquery?v=MyPnJt5nNj-JqUjPe0A2_UYglT541vULw1USCPodlm41"></script>
+
+    <script src="/bundles/bootstrap?v=wn09_L1DhCT5GuWkBy-EP_ZFvIFiW0-wQvT1IgOZ8Ic1"></script>
+
+    <script src="/bundles/main?v=WGEYe5PuR-CJjUNsTuB9FvARWnHP-9omsadQbADdXGU1"></script>
+
+    <script src="/bundles/jquery-ui?v=nmuMA-O4C0zphhL2ApoyudBi4v4VCXr0cCFlFmBK2eU1"></script>
+
+    <script src="/Scripts/commonLib.js"></script>
+    <script>
+        $(function () {
+            frontLib.init();
+        });
+    </script>
+    
+</body>
+</html>
